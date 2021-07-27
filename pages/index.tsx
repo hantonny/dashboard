@@ -28,6 +28,7 @@ export default function Home() {
                     <input type="number" className="form-control" id="exampleFormControlInput1"></input>
                     <p className="card-text mt-2"><small className="text-muted">e</small></p>
                     <input type="number" className="form-control" id="exampleFormControlInput1"></input>
+
                   </div>
                 </div>
               </div>
