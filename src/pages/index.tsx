@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 export default function Home() {
+  const numbers = [];
   const [number1, setNumber1] = useState('');
   const [number2, setNumber2] = useState('');
   const [number3, setNumber3] = useState('');
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState('') as any;
 
   const handleNumber1 = (number1) => {
     setNumber1(number1.target.value);
@@ -16,9 +17,15 @@ export default function Home() {
     setNumber3(number3.target.value);
   }
   const handleResult = () => {
-    const interacao = Math.floor(Math.random() * (parseInt(number3) - parseInt(number2) + 1)) + parseInt(number2);
-    setResult(interacao)
+    for (let index = 0; index < parseInt(number1); index++) {
+      numbers[index] = Math.floor(Math.random() * (parseInt(number3) - parseInt(number2) + 1)) + parseInt(number2);
+
+    }
+    const result = numbers.map(number => number.toString());
+    const text = result + '';
+    setResult(text);
   }
+
   return (
     <div className="container-fluid">
       <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#fd7c59' }}>
@@ -44,9 +51,9 @@ export default function Home() {
                     <button type="button" className="btn text-white fw-bold" style={{ backgroundColor: '#fd7c59' }} onClick={() => handleResult()}>TESTAR SORTEIO </button>
                   </div>
                 </div>
+                {!result ? '' : <p className="p-2 fs-6 text-center mt-2 fw-bold">Resultado: <span className="text-muted fs-5">{result}</span></p>}
               </div>
             </div>
-            {!result ? '' : <p className="text-center">{result}</p>}
           </div>
         </div>
       </div>
