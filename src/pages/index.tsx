@@ -29,6 +29,9 @@ export default function Home() {
     const text = result + '';
     setResult(text);
   }
+  var data = new Date();
+
+  var year = data.getFullYear();
 
   return (
     <div className="container-fluid">
@@ -37,7 +40,7 @@ export default function Home() {
           <Image
             src={img}
             width={120}
-            height={19}
+            height={18}
           />
         </div>
       </nav>
@@ -59,12 +62,13 @@ export default function Home() {
                     <button type="button" className="btn text-white fw-bold" style={{ backgroundColor: '#fd7c59' }} onClick={() => handleResult()}>TESTAR SORTEIO </button>
                   </div>
                 </div>
-                {!result ? '' : <p className="p-2 fs-6 text-center mt-1 fw-bold">Resultado: <br /><span className="text-muted fs-5">{result}</span></p>}
+                {!result ? '' : <p className="p-2 fs-6 text-center fw-bold">Resultado: <br /><span className="text-muted fs-5">{result}</span></p>}
               </div>
             </div>
           </div>
         </div>
       </div>
+      <p className="text-center text-muted fw-bold">Hantonny Korrea - {year}</p>
     </div >
   )
 }
