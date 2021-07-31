@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Image from 'next/image'
+
+import img from '../../public/sorteiogram.logo.png'
+
 
 export default function Home() {
   const numbers = [];
@@ -29,8 +33,12 @@ export default function Home() {
   return (
     <div className="container-fluid">
       <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#fd7c59' }}>
-        <div className="container-fluid">
-          <h1 className="navbar-brand text-white fs-3"><span className="fst-normal">Sorteio</span><span className="fw-bold fs-2"><small>Gram</small></span></h1>
+        <div className="navbar-brand p-3">
+          <Image
+            src={img}
+            width={120}
+            height={19}
+          />
         </div>
       </nav>
       <div className="row">
@@ -51,7 +59,7 @@ export default function Home() {
                     <button type="button" className="btn text-white fw-bold" style={{ backgroundColor: '#fd7c59' }} onClick={() => handleResult()}>TESTAR SORTEIO </button>
                   </div>
                 </div>
-                {!result ? '' : <p className="p-2 fs-6 text-center mt-2 fw-bold">Resultado: <span className="text-muted fs-5">{result}</span></p>}
+                {!result ? '' : <p className="p-2 fs-6 text-center mt-1 fw-bold">Resultado: <br /><span className="text-muted fs-5">{result}</span></p>}
               </div>
             </div>
           </div>
