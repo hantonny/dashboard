@@ -8,8 +8,9 @@ export default class MyDocument extends Document {
                     <title>SorteioGram</title>
                 </Head>
                 <body>
-                    <Main />
-
+                    <div className="container-fluid">
+                        <Main />
+                    </div>
                     <NextScript />
                 </body>
             </Html>
