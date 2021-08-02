@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </nav>
       <div className="row">
-        <div className="col-sm-6 d-flex justify-content-center mt-3">
+        <div className="col-sm-12 d-flex justify-content-center mt-3">
           <div className="card mb-3" style={{ maxWidth: '600px', width: '600px' }}>
             <div className="row">
               <div>
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 d-flex justify-content-center mt-3">
+        <div className="col-sm-12 d-flex justify-content-center mt-3">
           <div className="card mb-3" style={{ maxWidth: '600px', width: '600px' }}>
             <div className="row">
               <div>
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-center text-muted fw-bold fixed-bottom">Hantonny Korrea - {year}</p>
+      <p className="text-center text-muted fw-bold mt-2">Hantonny Korrea - {year}</p>
     </>
   )
 }
